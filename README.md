@@ -1,8 +1,10 @@
-# FsFs
+# kurohelper-fs
 
 以 F# 與 [Giraffe](https://github.com/giraffe-fsharp/Giraffe) 打造的個人檔案伺服器，搭配 Vue 3 前端，提供檔案瀏覽、上傳與管理功能。
 
 後端與前端為分離式架構；部署時前端與靜態資源通常由 Nginx 代理，後端只負責 API。
+
+> 內部 .NET 專案／組件名稱仍為 `FsFs`：本專案由 [FsFs](https://github.com/peter910820/FsFs) 衍生而來。
 
 ## 功能
 
@@ -27,7 +29,7 @@
 ## 專案結構
 
 ```
-FsFs/
+kurohelper-fs/
 ├── Handlers/          # API 處理邏輯
 ├── Infrastructure/    # 設定、資料庫、中介層、回應工廠
 ├── Models/            # DB / DTO 模型
@@ -107,7 +109,7 @@ yarn dev
 | `true`          | `true`  | `None`   | 使用 `DOMAIN` |
 
 
- `ALLOW_CORS` 需設定前端 Origin。
+`ALLOW_CORS` 需設定前端 Origin。
 
 ### 前端（`Frontend/.env`）
 
@@ -117,7 +119,6 @@ yarn dev
 | `VITE_API_DOMAIN`         | 後端 API 基底 URL                        |
 | `VITE_STATIC_FILE_DOMAIN` | 靜態檔案基底 URL                           |
 | `VITE_OG_*`               | 生產環境 Open Graph 相關（見 `.env.example`） |
-
 
 
 
